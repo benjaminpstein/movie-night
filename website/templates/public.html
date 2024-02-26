@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    movienight
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/public.css">
+<div class="row">
+    <div class="col-6">
+        <div id="title1">
+            <strong>your watch parties deserve an upgrade</strong>
+        </div>
+        <div id="title2">
+            no more arguing over movies or infinitely scrolling to find something that will please everyone.
+            with movienight, you and your friends will always know what to watch.
+        </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-2">
+        <a href="/sign-up">
+            <button type="button" class="btn btn-primary btn-lg get-started-btn">get started</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

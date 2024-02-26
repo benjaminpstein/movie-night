@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}
+    Make a Hangout
+{% endblock %}
+
+{% block content %}
+<div class="row mt-5">
+    <div class="col-2">
+    </div>
+    <div class="col-1">
+        <a href="/" class="btn btn-outline-secondary">Back</a>
+    </div>
+    <div class="col-md-6">
+        <form method="POST" class="bg-custom shadow-hard p-4 rounded">
+            <h3 class="mb-2 text-light">make a hangout</h3>
+            your friends will need the name and password to join the hangout
+            <br>
+            <br>
+            <div class="form-group login-field">
+                <label for="hangout_name" class="text-light">hangout name</label>
+                <input
+                    type="text"
+                    class="form-control form-control-dark"
+                    id="hangout_name"
+                    name="hangout_name"
+                    placeholder="hangout name"
+                >
+            </div>
+
+            <div class="form-group login-field">
+                <label for="hangout_password" class="text-light">hangout password</label>
+                <input
+                    type="text"
+                    class="form-control form-control-dark"
+                    id="hangout_password"
+                    name="hangout_password"
+                    placeholder="easy password please"
+                >
+            </div>
+
+            <div class="form-group login-field">
+                <label for="hangout_desc" class="text-light">hangout description</label>
+                <input
+                    type="text"
+                    class="form-control form-control-dark"
+                    id="hangout_desc"
+                    name="hangout_desc"
+                    placeholder="funny but also not too long"
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary login-field">Create</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

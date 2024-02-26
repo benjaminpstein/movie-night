@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}
+{{hangout.hangout_name}}
+{% endblock %}
+
+{% block content %}
+
+<script src="../static/hangout-page.js"></script>
+<link rel="stylesheet" href="../static/hangout-page.css">
+<div id="recommended-movies-data" data-recommended-movies="{{ recommended_movies | tojson | safe }}"></div>
+<script>
+    let recommended_movies = {{recommended_movies|tojson}}
+</script>
+<div class="row">
+    <div id="hangout-title">
+        {{hangout.hangout_name}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-10">
+        <div id="tagline">
+            {% if hangout.hangout_desc != None %}
+                {{hangout.hangout_desc}}
+            {% else %}
+                everything you like i liked 5 years ago
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-10">
+        <div class="row movie-search-row">
+            <div class="col-6">
+                <label for="movie_search" id="add-movie">add movie</label>
+                <input
+                        type="text"
+                        class="form-control"
+                        id="movie_search"
+                        name="movie_search"
+                        placeholder="search movie"
+                >
+            </div>
+            <div class="col-4">
+                <div class="whitespace"></div>
+                <label for="year_search"></label>
+                <input
+                        type="text"
+                        class="form-control"
+                        id="year_search"
+                        name="year_search"
+                        placeholder="year (include if movie is wrong)"
+                >
+            </div>
+            <div class="col-2">
+                <div class="whitespace"></div>
+                <button type="submit" class="btn btn-primary search-btn" onclick="searchMovie()">search</button>
+            </div>
+        </div>
+
+        <div id="movie-info-container">
+        </div>
+        <div class="row mt-3">
+            <div class="col-3">
+                <div id="voting-btn-container">
+                    <button class="btn btn-outline-primary col-10 tonight-movie-btn" onclick="votingMode()">enter voting mode</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div id="random-btn-container">
+                    <button class="btn btn-outline-secondary col-10 tonight-movie-btn" onclick="randomMovie()">choose random movie</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="tonight-movie-container"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="reset-vote-container"></div>
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-9">
+                <div id="recommended-movies-title">
+                    {{ hangout.hangout_name }}'s recommended movies
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="delete-mode-btn-container">
+                    <div class="row">
+                        <button type="submit" class="btn btn-secondary btn-sm" onclick="deleteMode()">choose movies to delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div id="recommended-movies-container">
+
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="row" id="members">
+            hangout members
+        </div>
+        {% for member in users_in_hangout %}
+        <div class="row">
+            {{ member.username }}
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

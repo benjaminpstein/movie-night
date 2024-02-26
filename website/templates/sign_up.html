@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}
+sign up
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <form method="POST" class="bg-custom shadow-hard p-4 rounded">
+            <h3 class="mb-4 text-light">sign up. your information probably won't be sold to the highest bidder.</h3>
+
+            <div class="form-group login-field">
+                <label for="email" class="text-light">email</label>
+                <input
+                        type="email"
+                        class="form-control form-control-dark"
+                        id="email"
+                        name="email"
+                        placeholder="enter your email"
+                >
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group login-field">
+                        <label for="first_name" class="text-light">first name</label>
+                        <input
+                                type="text"
+                                class="form-control form-control-dark"
+                                id="first_name"
+                                name="first_name"
+                                placeholder="first name"
+                        >
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group login-field">
+                        <label for="last_name" class="text-light">last name</label>
+                        <input
+                                type="text"
+                                class="form-control form-control-dark"
+                                id="last_name"
+                                name="last_name"
+                                placeholder="last name"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group login-field">
+                <label for="username" class="text-light">username</label>
+                <input
+                        type="text"
+                        class="form-control form-control-dark"
+                        id="username"
+                        name="username"
+                        placeholder="enter a username (funny)"
+                >
+            </div>
+
+            <div class="form-group login-field">
+                <label for="password1" class="text-light">password</label>
+                <input
+                        type="password"
+                        class="form-control form-control-dark"
+                        id="password1"
+                        name="password1"
+                        placeholder="enter your password"
+                >
+            </div>
+
+            <div class="form-group login-field">
+                <label for="password2" class="text-light">confirm password</label>
+                <input
+                        type="password"
+                        class="form-control form-control-dark"
+                        id="password2"
+                        name="password2"
+                        placeholder="don't mess up"
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary login-field">submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

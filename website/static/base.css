@@ -1,0 +1,31 @@
+:root {
+    --bs-primary: cyan;
+    --bs-secondary: hotpink;
+}
+
+.login-field {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.last-name {
+    display: inline-block;
+}
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: lightgray !important;
+}
+
+.bg-custom{
+    background-color: 	#394047;
+}
+
+.shadow-hard{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}

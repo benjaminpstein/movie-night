@@ -1,0 +1,72 @@
+#welcome{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+#desc{
+    font-size: 16px;
+    color: gray;
+}
+
+#your-hangouts{
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hangout-row{
+    background-color: #394047;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+.hangout-name{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.arrow{
+    display: inline-block;
+}
+.users-in-hangout{
+    color: lightgray;
+    font-size: 12px;
+}
+.hangout-desc{
+    color: lightgray;
+    font-size: 12px;
+
+}
+.info-row{
+    margin-bottom: 10px;
+}
+#find-hangout{
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#no-hangouts{
+    color: lightgray;
+    font-size: 14px;
+}
+.hangout-info-btn{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.leave-hangout{
+    margin-right: 15px;
+}
+.find-hangout-btn{
+    padding: 25px;
+    color: lightgray;
+    border-width: 2px;
+}
+.recommend-btn{
+    cursor: pointer;
+}
